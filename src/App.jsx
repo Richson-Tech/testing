@@ -1,11 +1,11 @@
-import Test from './components/test.jsx'
+import Test from './components/PostList.jsx'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <Test/>
+      <PostList/>
     </>
   )
 }
