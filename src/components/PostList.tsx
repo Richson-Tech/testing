@@ -1,5 +1,6 @@
 import React from "react";
 import PostCard from "./PostCard";
+import { PostProps } from "../types";
 
 async function getData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/post");
@@ -12,11 +13,14 @@ async function getData() {
 }
 
 const PostList = async () => {
-  const data = await getData();
+  const data: PostProps [] = await getData();
   return (
     <div className="postList">
-      Postlist
-      <PostCard title="lol" body="lll" />
+      {/* Postlist
+      <PostCard title="lol" body="lll" /> */}
+      {data.map((post) => (
+        <PostCard key={post.id} {...post} />
+      ))}
     </div>
   );
 };

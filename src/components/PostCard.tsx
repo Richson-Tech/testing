@@ -1,6 +1,7 @@
 import React from "react";
+import { PostProps } from "../types";
 
-const PostCard = (props: { title: string; body: string }) => {
+const PostCard = (props: PostProps) => {
   return (
     <div>
       <h1>{props.title}</h1>
