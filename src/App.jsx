@@ -1,4 +1,3 @@
-import Test from './components/PostList.jsx'
 import './App.css'
 
 function App() {
