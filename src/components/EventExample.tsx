@@ -10,7 +10,9 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   console.log(e.target.value);
 };
 
-const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: number) => {};
+const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: number) => {
+  console.log(`Post ${id} has been deleted`);
+};
 
 const EventExample = () => {
   return (
@@ -33,7 +35,7 @@ const EventExample = () => {
           voluptate, quis dolores aspernatur magni recusandae laboriosam cum.
           Libero, repudiandae quos!
         </p>
-        <button onClick={() => handleDelete(1)}>Delete</button>
+        <button onClick={(e) => handleDelete(e, 1)}>Delete</button>
       </form>
       <form className="post">
         <h1>
@@ -45,7 +47,7 @@ const EventExample = () => {
           voluptate, quis dolores aspernatur magni recusandae laboriosam cum.
           Libero, repudiandae quos!
         </p>
-        <button onClick={() => handleDelete(1)}>Delete</button>
+        <button onClick={(e) => handleDelete(e, 2)}>Delete</button>
       </form>
     </div>
   );
