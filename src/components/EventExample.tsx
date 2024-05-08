@@ -55,19 +55,18 @@
 
 // export default EventExample;
 
+import React, { useState } from "react";
 
-import React, { useState } from 'react'
-
-const [userName, setUsername] = useState("")
-const [user, setUser] = useState("")
+const [userName, setUsername] = useState("");
+const [user, setUser] = useState("");
 
 const EventExample = () => {
   return (
-    <div className='usestate'>
-      <input type="text" placeholder='username' />
+    <div className="usestate">
+      <input type="text" placeholder="username" />
       <button>Login</button>
     </div>
-  )
-}
+  );
+};
 
-export default EventExample
+export default EventExample;
