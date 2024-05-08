@@ -3,13 +3,24 @@ import React from "react";
 
 const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
   e.preventDefault();
+  alert("hiii");
 };
+
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  console.log(e.target.value);
+};
+
+const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: number) => {};
 
 const EventExample = () => {
   return (
     <div className="eventExample">
       <form>
-        <input type="text" placeholder="input anything here..." />
+        <input
+          type="text"
+          placeholder="input anything here..."
+          onChange={handleChange}
+        />
         <button onClick={handleClick}>Search</button>
       </form>
       <form className="post">
@@ -22,7 +33,7 @@ const EventExample = () => {
           voluptate, quis dolores aspernatur magni recusandae laboriosam cum.
           Libero, repudiandae quos!
         </p>
-        <button>Delete</button>
+        <button onClick={() => handleDelete(1)}>Delete</button>
       </form>
       <form className="post">
         <h1>
@@ -34,7 +45,7 @@ const EventExample = () => {
           voluptate, quis dolores aspernatur magni recusandae laboriosam cum.
           Libero, repudiandae quos!
         </p>
-        <button>Delete</button>
+        <button onClick={() => handleDelete(1)}>Delete</button>
       </form>
     </div>
   );
