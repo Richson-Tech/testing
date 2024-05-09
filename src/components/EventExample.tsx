@@ -6,10 +6,10 @@ type UserType = {
   name: string;
 };
 
-const [userName, setUsername] = useState("");
-const [user, setUser] = useState<UserType | null>(null);
 
 const EventExample = () => {
+  const [userName, setUsername] = useState("");
+  const [user, setUser] = useState<UserType | null>(null);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value);
   };
