@@ -32,6 +32,8 @@ const EventExample = () => {
           <button onClick={handleCick}>Login</button>
         </form>
       )}
+      {/* illustration  */}
+      {user?.name}
     </div>
   );
 };
