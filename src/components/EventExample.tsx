@@ -10,8 +10,8 @@ const EventExample = () => {
   }, []);
 
   const handleClick = () => {
-    console.log("The userName name is" + userNameinputRef.current?.value)
-  }
+    console.log("The userName name is" + userNameinputRef.current?.value);
+  };
 
   return (
     <div className="useRefHook">
